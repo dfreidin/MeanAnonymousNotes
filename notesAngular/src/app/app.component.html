@@ -1,0 +1,8 @@
+<h1>Anonymous Notes</h1>
+<form (submit)="createNote()">
+  <p>Note: <input type="text" name="new_note.note" required minlength="3" [(ngModel)]="new_note.note">&nbsp;
+  <input type="submit" value="Add Note"></p>
+</form>
+<div id="notes">
+  <app-note *ngFor="let note of notes" [note]="note"></app-note>
+</div>
